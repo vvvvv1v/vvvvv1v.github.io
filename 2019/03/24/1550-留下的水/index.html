@@ -45,6 +45,12 @@
 
 
 
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
 
 
 
@@ -82,7 +88,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -103,19 +109,19 @@
 
 
 
-  <meta name="description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。 Input Format共两行。 第1行：n(1&amp;lt;=n&amp;lt;=1000)，代表横坐标总个数。 第2行：共n个非负整数xi(1&amp;lt;=xi&amp;lt;=10000)，以数组形式出现. 如[">
+  <meta name="description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。">
 <meta name="keywords" content="暴力">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1550.留下的水">
 <meta property="og:url" content="https://vvvvv1v.cn/2019/03/24/1550-留下的水/index.html">
 <meta property="og:site_name" content="vvvvv1v">
-<meta property="og:description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。 Input Format共两行。 第1行：n(1&amp;lt;=n&amp;lt;=1000)，代表横坐标总个数。 第2行：共n个非负整数xi(1&amp;lt;=xi&amp;lt;=10000)，以数组形式出现. 如[">
+<meta property="og:description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://acm.sjtu.edu.cn/OnlineJudge/pic/1550/figure.png">
-<meta property="og:updated_time" content="2019-03-24T07:16:09.063Z">
+<meta property="og:updated_time" content="2019-03-25T17:28:01.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1550.留下的水">
-<meta name="twitter:description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。 Input Format共两行。 第1行：n(1&amp;lt;=n&amp;lt;=1000)，代表横坐标总个数。 第2行：共n个非负整数xi(1&amp;lt;=xi&amp;lt;=10000)，以数组形式出现. 如[">
+<meta name="twitter:description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。">
 <meta name="twitter:image" content="https://acm.sjtu.edu.cn/OnlineJudge/pic/1550/figure.png">
 
 
@@ -173,6 +179,10 @@
 </noscript>
 
 </head>
+
+<script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+<link rel="stylesheet" href="/photos/photos.css">
+<script type="text/javascript" src="/photos/photo.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -281,6 +291,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-相册">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i> <br>相册</a>
 
   </li>
 
@@ -452,6 +479,7 @@
       
         <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。</p>
 <p>给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。</p>
+<a id="more"></a>
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>共两行。</p>
 <p>第1行：n(1&lt;=n&lt;=1000)，代表横坐标总个数。</p>
 <p>第2行：共n个非负整数xi(1&lt;=xi&lt;=10000)，以数组形式出现.</p>
@@ -781,6 +809,8 @@
 
 
 
+  
+
 
 
 
@@ -806,6 +836,9 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 
   
   <script src="/lib/three/three.min.js"></script>

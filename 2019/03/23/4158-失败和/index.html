@@ -45,6 +45,12 @@
 
 
 
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
 
 
 
@@ -82,7 +88,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -103,18 +109,18 @@
 
 
 
-  <meta name="description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。 Input Format第一行为数据的组数T。 第二行开始是数据，每组数据两行。 其中">
+  <meta name="description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。">
 <meta name="keywords" content="前缀和,连续子序列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4158.失败和">
 <meta property="og:url" content="https://vvvvv1v.cn/2019/03/23/4158-失败和/index.html">
 <meta property="og:site_name" content="vvvvv1v">
-<meta property="og:description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。 Input Format第一行为数据的组数T。 第二行开始是数据，每组数据两行。 其中">
+<meta property="og:description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T15:54:54.949Z">
+<meta property="og:updated_time" content="2019-03-25T17:28:45.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4158.失败和">
-<meta name="twitter:description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。 Input Format第一行为数据的组数T。 第二行开始是数据，每组数据两行。 其中">
+<meta name="twitter:description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。">
 
 
 
@@ -171,6 +177,10 @@
 </noscript>
 
 </head>
+
+<script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+<link rel="stylesheet" href="/photos/photos.css">
+<script type="text/javascript" src="/photos/photo.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -279,6 +289,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-相册">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i> <br>相册</a>
 
   </li>
 
@@ -451,6 +478,7 @@
         <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>失败者不需要体面。</p>
 <p>XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。</p>
 <p>现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。</p>
+<a id="more"></a>
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>第一行为数据的组数T。</p>
 <p>第二行开始是数据，每组数据两行。</p>
 <p>其中第一行是两个整数n、 m。n是数字串的长度，m为失败数。</p>
@@ -798,6 +826,8 @@ sum[n]-sum[i]</script><p>又由于</p>
 
 
 
+  
+
 
 
 
@@ -823,6 +853,9 @@ sum[n]-sum[i]</script><p>又由于</p>
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 
   
   <script src="/lib/three/three.min.js"></script>

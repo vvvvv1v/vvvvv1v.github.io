@@ -45,6 +45,12 @@
 
 
 
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
 
 
 
@@ -82,7 +88,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -103,18 +109,18 @@
 
 
 
-  <meta name="description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，才">
+  <meta name="description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30​$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，">
 <meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4202.植树节">
 <meta property="og:url" content="https://vvvvv1v.cn/2019/03/22/4202-植树节/index.html">
 <meta property="og:site_name" content="vvvvv1v">
-<meta property="og:description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，才">
+<meta property="og:description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30​$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T15:55:18.946Z">
+<meta property="og:updated_time" content="2019-03-25T17:26:58.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4202.植树节">
-<meta name="twitter:description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，才">
+<meta name="twitter:description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30​$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，">
 
 
 
@@ -171,6 +177,10 @@
 </noscript>
 
 </head>
+
+<script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+<link rel="stylesheet" href="/photos/photos.css">
+<script type="text/javascript" src="/photos/photo.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -279,6 +289,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-相册">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i> <br>相册</a>
 
   </li>
 
@@ -449,7 +476,8 @@
 
       
         <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。</p>
-<p>同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，才能使观赏价值总和最高。</p>
+<p>同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30​$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，才能使观赏价值总和最高。</p>
+<a id="more"></a>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行一个整数$n$，表示需要种的树的棵树。</p>
 <p>接下来$n$行，每行$3$个不超过$10000$的正整数$ai$,$bi$,$ci$，分别表示了在第$i$个位置种高度为$10,20,30$的树能获得的观赏价值。</p>
 <p>第$i$个位置的树与第$i+1$个位置的树相邻，特别地请注意，第$1$个位置的树与第$n$个位置的树相邻。</p>
@@ -778,6 +806,8 @@
 
 
 
+  
+
 
 
 
@@ -803,6 +833,9 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 
   
   <script src="/lib/three/three.min.js"></script>

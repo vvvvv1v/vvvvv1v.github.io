@@ -45,6 +45,12 @@
 
 
 
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
 
 
 
@@ -82,7 +88,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -103,18 +109,18 @@
 
 
 
-  <meta name="description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。首先一个数 A=A">
+  <meta name="description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。">
 <meta name="keywords" content="递推,回文串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3044.palin">
 <meta property="og:url" content="https://vvvvv1v.cn/2019/03/21/3044-palin/index.html">
 <meta property="og:site_name" content="vvvvv1v">
-<meta property="og:description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。首先一个数 A=A">
+<meta property="og:description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T15:53:34.934Z">
+<meta property="og:updated_time" content="2019-03-25T17:28:15.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3044.palin">
-<meta name="twitter:description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。首先一个数 A=A">
+<meta name="twitter:description" content="Description大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。 那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。">
 
 
 
@@ -171,6 +177,10 @@
 </noscript>
 
 </head>
+
+<script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+<link rel="stylesheet" href="/photos/photos.css">
+<script type="text/javascript" src="/photos/photo.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -279,6 +289,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-相册">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i> <br>相册</a>
 
   </li>
 
@@ -449,7 +476,7 @@
 
       
         <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>大家都知道回文串吧~ 简单地说就是左右对称的一个串,比如 abcba,werrew。小 s 对回文串的研究已经够深刻了,现在她转而研究其他方面的回文,比如,数的回文拆分。对于自然数的拆分,就是把一个自然数 N 用若干个整数之和表示。比如5=1+2+3+4+5=1+2+1+7+1+2+1。</p>
-<p>那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。首先一个数 A=A 是一个回文拆分。其次,一个自然数N=A+A 或是 N=A+x+A,其中 A 是一个回文拆分,x 是任意一个自然数,这两种也是回文拆分。举个例子,7 的所有回文拆分有7, 1+5+1, 2+3+2, 1+1+3+1+1, 3+1+3, 1+1+1+1+1+1+1。</p>
+<p>那么怎样的拆分才算是回文的呢?我们用从归纳的角度来定义数的回文拆分。<a id="more"></a>首先一个数 A=A 是一个回文拆分。其次,一个自然数N=A+A 或是 N=A+x+A,其中 A 是一个回文拆分,x 是任意一个自然数,这两种也是回文拆分。举个例子,7 的所有回文拆分有7, 1+5+1, 2+3+2, 1+1+3+1+1, 3+1+3, 1+1+1+1+1+1+1。</p>
 <p>现在小 s 想知道,一个正整数N 的回文拆分到底有多少种。由于这个数字可能很大,小 s 只需要你告诉她答案 mod 1,000,000,007 的值。</p>
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>一行,一个正整数 N</p>
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>一行,一个整数 M,为 N 的回文拆分数 mod 1,000,000,007 的值</p>
@@ -776,6 +803,8 @@
 
 
 
+  
+
 
 
 
@@ -801,6 +830,9 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 
   
   <script src="/lib/three/three.min.js"></script>
