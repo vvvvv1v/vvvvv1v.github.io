@@ -35,13 +35,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
 
 
 
@@ -112,6 +105,16 @@
   
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入key') !== ''){
+                alert('key错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <meta name="description" content="Description下雨了，由于地面坑坑洼洼所以存了不少的水，小明很好奇，想看看一共留下了多少水（只考虑每个纵截面留存水的面积）。 给出n个非负整数代表每单位宽度横坐标的高度，请计算一共可以接下多少的水。">

@@ -35,13 +35,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
 
 
 
@@ -112,6 +105,16 @@
   
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入key') !== ''){
+                alert('key错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <meta name="description" content="题目描述春天到了，同学们在阳光明媚的周六来到小花园，他们站成一圈，想在一个环形的草地上均匀地种上$n$棵树，但是每个位置的土壤都有它适合种的树的种类，种在合适的土壤上可以提升这种树的观赏价值。 同学们打算种$3$种树，这$3$种树的高度分别为$10,20,30​$。同学们希望把这一圈树种得有层次感，所以任何一个位置的树都要求比它相邻的两棵树的高度都高或者都低，在这个条件下，同学们希望知道如何植树，">

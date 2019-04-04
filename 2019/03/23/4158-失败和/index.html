@@ -35,13 +35,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
 
 
 
@@ -112,6 +105,16 @@
   
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入key') !== ''){
+                alert('key错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <meta name="description" content="Description失败者不需要体面。 XYF想知道这个世界上有没有像SQD一样失败的人。相传有一种测试一个人是否失败的方法，那就是让他随机写下一串数字。如果这串数字的某个连续子序列的和为失败数的倍数，那么这个连续子序列被称为一个失败证据。 现在请成功的你编写一个程序来帮助XYF计算一串数字中失败证据的数量。">

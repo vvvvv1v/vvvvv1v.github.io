@@ -35,13 +35,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
 
 
 
@@ -112,6 +105,16 @@
   
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入key') !== ''){
+                alert('key错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   <meta name="description" content="比赛流程由于租不起服务器和写不出OJ架构，以及受到Nazo Puzzle的启发，本次社内赛打算以原始传统的方式进行。比赛共有9道题目，按照OI的传统以DxTy的模式命名，每一D中的题目难度貌似是相近的。">
