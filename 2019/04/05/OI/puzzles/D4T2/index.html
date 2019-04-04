@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-Vface_2.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-Vface_2.ico?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="比赛尚未开始...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D4T2.小v裁方形">
+<meta property="og:url" content="https://vvvvv1v.cn/2019/04/05/OI/puzzles/D4T2/index.html">
+<meta property="og:site_name" content="vvvvv1v">
+<meta property="og:description" content="比赛尚未开始...">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-04T17:03:53.856Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D4T2.小v裁方形">
+<meta name="twitter:description" content="比赛尚未开始...">
+
+
+
+
+
+
+  <link rel="canonical" href="https://vvvvv1v.cn/2019/04/05/OI/puzzles/D4T2/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>D4T2.小v裁方形 | vvvvv1v</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">vvvvv1v</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-相册">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i> <br>相册</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://vvvvv1v.cn/2019/04/05/OI/puzzles/D4T2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jay Lin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vvvvv1v">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">D4T2.小v裁方形
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-05 00:00:02" itemprop="dateCreated datePublished" datetime="2019-04-05T00:00:02+08:00">2019-04-05</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/04/05/OI/puzzles/D4T2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/05/OI/puzzles/D4T2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="请输入开启key：">
+    <label for="pass">请输入开启key：</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/05/OI/puzzles/D5T1/" rel="next" title="D5T1.小v吃青团">
+                <i class="fa fa-chevron-left"></i> D5T1.小v吃青团
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/05/OI/puzzles/D4T1/" rel="prev" title="D4T1.小v选课表">
+                D4T1.小v选课表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jay Lin</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/vvvvv1v" title="GitHub &rarr; https://github.com/vvvvv1v" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-angellist"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jay Lin</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'PVHTJkvSYQWzUXfUMtQsHpEt-gzGzoHsz',
+    appKey: 'xm94LxlGm7ByxTLWCI4VYxnH',
+    placeholder: ':)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
