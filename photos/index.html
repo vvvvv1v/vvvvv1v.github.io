@@ -117,12 +117,12 @@
 </script>
 
 
-  <meta name="description" content=".left {             width: 48%;             float: left;         }         .right {             width: 48%;             float: right;         }         .all {             width: 100%;">
+  <meta name="description" content="$(document).ready(function(){ $(window).bind(&quot;scroll&quot;, function(event){         $(&quot;.datagrid&quot;).each(function(){             //窗口的高度+看不见的顶部的高度=屏幕低部距离最顶部的高度               var thisButtomT">
 <meta property="og:type" content="website">
-<meta property="og:title" content="photos">
+<meta property="og:title" content="vvvvv1v">
 <meta property="og:url" content="https://vvvvv1v.cn/photos/index.html">
 <meta property="og:site_name" content="vvvvv1v">
-<meta property="og:description" content=".left {             width: 48%;             float: left;         }         .right {             width: 48%;             float: right;         }         .all {             width: 100%;">
+<meta property="og:description" content="$(document).ready(function(){ $(window).bind(&quot;scroll&quot;, function(event){         $(&quot;.datagrid&quot;).each(function(){             //窗口的高度+看不见的顶部的高度=屏幕低部距离最顶部的高度               var thisButtomT">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/08/A4uSu6.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/08/A4nxjx.jpg">
@@ -137,10 +137,10 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANgKts.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANgA6f.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANgEX8.jpg">
-<meta property="og:updated_time" content="2019-04-07T16:28:28.736Z">
+<meta property="og:updated_time" content="2019-04-09T07:11:25.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="photos">
-<meta name="twitter:description" content=".left {             width: 48%;             float: left;         }         .right {             width: 48%;             float: right;         }         .all {             width: 100%;">
+<meta name="twitter:title" content="vvvvv1v">
+<meta name="twitter:description" content="$(document).ready(function(){ $(window).bind(&quot;scroll&quot;, function(event){         $(&quot;.datagrid&quot;).each(function(){             //窗口的高度+看不见的顶部的高度=屏幕低部距离最顶部的高度               var thisButtomT">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/04/08/A4uSu6.jpg">
 
 
@@ -158,7 +158,7 @@
   };
 </script>
 
-  <title>photos | vvvvv1v</title>
+  <title> | vvvvv1v</title>
   
 
 
@@ -387,7 +387,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">photos
+<h1 class="post-title" itemprop="name headline">
 
 </h1>
 
@@ -408,6 +408,40 @@
         
         
           <html>
+<head><meta name="generator" content="Hexo 3.8.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$(window).bind("scroll", function(event){
+        $(".datagrid").each(function(){
+            //窗口的高度+看不见的顶部的高度=屏幕低部距离最顶部的高度  
+            var thisButtomTop = parseInt($(window).height()) + parseInt($(window).scrollTop());
+            //屏幕顶部距离最顶部的高度  
+            var thisTop = parseInt($(window).scrollTop()); 
+
+            var PictureTop = parseInt($(this).offset().top);
+            var flag = $(this).data('flag');
+            if(!(flag == true)){
+                 if (PictureTop >= thisTop && PictureTop <= thisButtomTop) {
+                   $(this).append('动态内容'); 
+                    $(this).data('flag',true);//设置为加载完成
+                }
+            }
+
+        });
+
+    })
+});
+</script>
+</head>
+<body>
+<div>
+
+
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <style type="text/css">
@@ -431,17 +465,17 @@
 
 <body>
     <div class="left"> 
-        <center><img src="https://s2.ax1x.com/2019/04/08/A4uSu6.jpg" alt="小泥俑" border="0">小泥俑</center>
-        <center><img src="https://s2.ax1x.com/2019/04/08/A4nxjx.jpg" alt="小馆子的大白菜" border="0">小馆子的大白菜</center>
+        <center><img class="image" src="https://s2.ax1x.com/2019/04/08/A4uSu6.jpg" alt="小泥俑" border="0">小泥俑</center>
+        <center><img class="image" src="https://s2.ax1x.com/2019/04/08/A4nxjx.jpg" alt="小馆子的大白菜" border="0">小馆子的大白菜</center>
     </div>
 
     <div class="right">
-        <center><img src="https://s2.ax1x.com/2019/04/08/A4nXC9.jpg" alt="南澳的灯塔" border="0">南澳的灯塔</center>
-        <center><img src="https://s2.ax1x.com/2019/04/08/A4nj3R.jpg" alt="图书馆·斜阳" border="0">图书馆·斜阳</center>
+        <center><img class="image" src="https://s2.ax1x.com/2019/04/08/A4nXC9.jpg" alt="南澳的灯塔" border="0">南澳的灯塔</center>
+        <center><img class="image" src="https://s2.ax1x.com/2019/04/08/A4nj3R.jpg" alt="图书馆·斜阳" border="0">图书馆·斜阳</center>
     </div>
 
     <div class="all"> 
-        <center><img src="https://s2.ax1x.com/2019/04/08/A4nvg1.jpg" alt="逼哥的音乐节" border="0">逼哥的音乐节</center>
+        <center><img class="image" src="https://s2.ax1x.com/2019/04/08/A4nvg1.jpg" alt="逼哥的音乐节" border="0">逼哥的音乐节</center>
     </div>
 
     <div class="left"> 
@@ -465,6 +499,12 @@
 
 </body>
 
+
+
+
+
+</div>
+</body>
 </html>
 
 
