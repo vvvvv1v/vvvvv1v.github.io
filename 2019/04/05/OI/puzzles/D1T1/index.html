@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="vvvvv1v">
 <meta property="og:description" content="//本页密码已取消 Description为了让你熟悉比赛的规则，小v决定让你实现一个计算机的基础功能，即读入两个整数，然后求和输出。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-08T08:57:07.970Z">
+<meta property="og:updated_time" content="2019-04-11T02:08:38.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="D1T1.小v初试炼">
 <meta name="twitter:description" content="//本页密码已取消 Description为了让你熟悉比赛的规则，小v决定让你实现一个计算机的基础功能，即读入两个整数，然后求和输出。">
@@ -461,6 +461,9 @@
 <h2 id="Data-Range"><a href="#Data-Range" class="headerlink" title="Data Range"></a>Data Range</h2><p>$-10^{15}\le A, B\le 10^{15}$。</p>
 <h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p>key1—&gt;<a href="https://vvvvv1v.cn/2019/04/05/OI/puzzles/D2T1/">D2T1</a></p>
 <p>key2—&gt;<a href="https://vvvvv1v.cn/2019/04/05/OI/puzzles/D2T2/">D2T2</a></p>
+<hr>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>emmm…这道题不需要思路，主要是熟悉文件的读取操作，C/C++的朋友要考虑数据类型的范围。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">ifstream <span class="title">infile</span><span class="params">(<span class="string">"D1T1.in"</span>)</span></span>;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> a, b;</span><br><span class="line">	infile &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a + b;</span><br><span class="line">    infile.close();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -528,6 +531,7 @@
 <span id="jinrishici-sentence">让我挑一挑...就这句啦！</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
   </div></center>
+  
   
     <div class="comments" id="comments">
     </div>
@@ -688,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input-Format"><span class="nav-number">2.</span> <span class="nav-text">Input Format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output-Format"><span class="nav-number">3.</span> <span class="nav-text">Output Format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Range"><span class="nav-number">6.</span> <span class="nav-text">Data Range</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Links"><span class="nav-number">7.</span> <span class="nav-text">Links</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input-Format"><span class="nav-number">2.</span> <span class="nav-text">Input Format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output-Format"><span class="nav-number">3.</span> <span class="nav-text">Output Format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Range"><span class="nav-number">6.</span> <span class="nav-text">Data Range</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Links"><span class="nav-number">7.</span> <span class="nav-text">Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">8.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-代码"><span class="nav-number">9.</span> <span class="nav-text">C++代码</span></a></li></ol></div>
             
 
           </div>
