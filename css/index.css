@@ -50,9 +50,19 @@ h6, .h6 {
   }
 }
 
+
+.content .post img.vertical {
+  width: 30em;
+}
+.content .post img.horizontal {
+  width: 50em;
+}
 .content .post img {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   margin-bottom: 1em;
 }
+
 
 /* post-caption */
 .main .work a .caption{
