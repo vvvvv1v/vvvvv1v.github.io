@@ -545,3 +545,12 @@ pre .keyword,
 pre .javascript .function {
   color: #c9c;
 }
+
+/* Lazy Load */
+.lazy {
+  opacity: 0; /* 隐藏 */
+  transition: opacity 1s ease; /* 转换效果 */
+}
+.lazy-loaded {
+  opacity: 1; /* 显示 */
+}
