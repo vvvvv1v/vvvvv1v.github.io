@@ -48,6 +48,10 @@ h6, .h6 {
     margin-left: 0.6em;
     margin-right: 0.6em;
   }
+  .content .post img {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
 }
 
 
@@ -58,8 +62,6 @@ h6, .h6 {
   width: 50em;
 }
 .content .post img {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
   margin-bottom: 1em;
 }
 
