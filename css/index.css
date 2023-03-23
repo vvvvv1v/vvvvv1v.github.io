@@ -43,15 +43,52 @@ h6, .h6 {
 }
 
 /* custom post content */
-@media screen and (min-width: 500px) {
-  .content .post p {
-    margin-left: 0.6em;
-    margin-right: 0.6em;
+/* @media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1152px; 
+    width: 1152px;
   }
-  .content .post img {
+}
+@media screen and (min-width: 1088px) {
+  .container {
+    max-width: 960px; 
+    width: 960px;
+  }
+} */
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 900px; 
+    width: 900px;
+  }
+}
+/* @media screen and (min-width: 1088px) {
+  .container {
+    max-width: 960px; 
+    width: 960px;
+  }
+} */
+.content .post p {
+  text-align: justify;
+}
+
+/* 这里是为了覆盖掉bulma的默认样式 */
+.content figure {
+  margin: 0;
+}
+
+.content .post {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+@media screen and (min-width: 600px) {
+  .content .post {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  /* .content .post img {
     margin-left: 0.5em;
     margin-right: 0.5em;
-  }
+  } */
 }
 
 
@@ -63,6 +100,9 @@ h6, .h6 {
 }
 .content .post img {
   margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
